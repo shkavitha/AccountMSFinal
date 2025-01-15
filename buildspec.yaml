@@ -4,7 +4,8 @@ phases:
   pre_build:
     commands:
       - echo start pre build
-      - gradlew clean build
+      - chmod +x gradlew
+      - ./gradlew clean build
       - echo Logging in to Amazon ECR...
       - aws --version
       - REPOSITORY_URI=522814707388.dkr.ecr.us-east-2.amazonaws.com/bofa-account-reg
